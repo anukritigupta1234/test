@@ -18,3 +18,9 @@ steps:
     npm install
     gulp default --gulpfile gulpfile.js
   displayName: 'npm install and run gulp'
+
+- task: DownloadGitHubRelease@0
+  displayName: 'Download GitHub Release'
+  inputs:
+    connection: 'github'
+    userRepository: 'anukritigupta1234/test'
