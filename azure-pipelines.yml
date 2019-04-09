@@ -9,15 +9,6 @@ trigger:
 pool: default
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '8.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm install
-    gulp default --gulpfile gulpfile.js
-  displayName: 'npm install and run gulp'
 
 - task: DownloadGitHubRelease@0
   displayName: 'Download GitHub Release'
