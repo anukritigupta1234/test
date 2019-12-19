@@ -6,6 +6,11 @@
 trigger:
 - master
 
+resources:
+ pipelines:
+     - pipeline: my_pipeline
+       source: anukritigupta1234.helloworld
+
 pool: default
 
 steps:
