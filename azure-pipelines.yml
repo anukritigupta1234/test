@@ -10,6 +10,7 @@ resources:
  pipelines:
      - pipeline: my_pipeline
        source: anukritigupta1234.hello-world
+       trigger: true
 
 pool: default
 
