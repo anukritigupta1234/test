@@ -14,9 +14,16 @@ resources:
 pool: default
 
 steps:
-
-- task: DownloadGitHubRelease@0
-  displayName: 'Download GitHub Release'
+- task: ArchiveFiles@2
   inputs:
-    connection: 'github'
-    userRepository: 'anukritigupta1234/test'
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+# - task: DownloadGitHubRelease@0
+#   displayName: 'Download GitHub Release'
+#   inputs:
+#     connection: 'github'
+#     userRepository: 'anukritigupta1234/test'
