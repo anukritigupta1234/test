@@ -23,6 +23,8 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
+- checkout: my_pipeline1
+
 # - task: DownloadGitHubRelease@0
 #   displayName: 'Download GitHub Release'
 #   inputs:
